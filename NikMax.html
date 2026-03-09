@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>NikMax | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/NikMax.css">
+    <link rel="stylesheet" href="/path/to/bpg-banner-extrasquare-caps.min.css">
+    <link rel="stylesheet" href="NikMax.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -15,48 +16,68 @@
         <img src="/asets/img/bg_nikmax.webp" alt="Background" class="bg-image">
     </div>
 
+    <canvas id="particles-canvas"></canvas>
+
     <div id="enter-screen">
-        <h1>[ CLICK TO ENTER ]</h1>s
+        <h1>[ CLICK TO ENTER ]</h1>
     </div>
 
     <audio id="bgmusic" src="/asets/sound/nikmax.mp3" loop></audio>
 
     <a href="index.html" class="back-btn">უკან დაბრუნება</a>
 
-    <main class="hero-container">
-        <div class="character-box">
-            <img src="/asets/img/yt_logo.png" alt="Character" class="mc-skin">
-        </div>
-
-        <div class="content-box">
-            <h3 class="hi-text">მაქსიმალური გამარჯობა</h3>
-            <h1 class="main-title">მე ვარ <span id="typing-text"></span><span class="cursor">|</span></h1>
-            <p class="description">
-                CyberX-ის ერთ-ერთი დამფუძნებელი და Content Creatori, ასევე Minecraft სერვერის ადმინისტრატორი.
-                ვცდილობ მაქსიმალურად გავაუმჯობესო ჩვენი სერვერის ხარისხი და მომხმარებლების გამოცდილება.
-                ამ გვერდზე შეგიძლიათ ნახოთ ჩემი სოციალური ქსელები, ასევე შეგიძლიათ მიყუროთ სხვადასხვა პლატფორმაზე.
-            </p>
-
-            <div class="social-icons">
-                <a href="https://www.youtube.com/@n1kmax" target="_blank">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://www.instagram.com/_m1qeladze29_/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://steamcommunity.com/profiles/76561199862947526" target="_blank">
-                    <i class="fab fa-steam"></i>
-                </a>
+    <div class="hero-wrapper">
+        <main class="hero-container">
+            <div class="character-box">
+                <img src="/asets/img/yt_logo.png" alt="Character" class="mc-skin">
             </div>
+
+            <div class="content-box">
+                <h3 class="hi-text">მაქსიმალური გამარჯობა</h3>
+                <h1 class="main-title">მე ვარ <span id="typing-text"></span><span class="cursor"></span></h1>
+                <p class="description">
+                    CyberX-ის ერთ-ერთი დამფუძნებელი და Content Creator-ი, ასევე Minecraft სერვერის ადმინისტრატორი.
+                    ვცდილობ მაქსიმალურად გავაუმჯობესო ჩვენი სერვერის ხარისხი და მომხმარებლების გამოცდილება.
+                    ამ გვერდზე შეგიძლიათ ნახოთ ჩემი სოციალური ქსელები, ასევე შეგიძლიათ მიყუროთ სხვადასხვა პლატფორმაზე.
+                </p>
+
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@n1kmax" target="_blank" class="social-link yt">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_m1qeladze29_/" target="_blank" class="social-link ig">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://discord.gg/dDn8mTg9wU" target="_blank" class="social-link dc">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <img src="/asets/img/Spyglass_(item)_JE3_BE1.png" alt="Scroll Down" class="spyglass-icon">
+                <div class="arrows">
+                    <i class="fas fa-chevron-down arrow1"></i>
+                    <i class="fas fa-chevron-down arrow2"></i>
+                    <i class="fas fa-chevron-down arrow3"></i>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <section id="new-section" class="gradient-bg">
+        <h2 class="section-title">ბოლო ვიდეოები</h2>
+        <div class="videos-container" id="videos-container">
+            <!-- Videos will be injected here via JavaScript -->
         </div>
-    </main>
+    </section>
 
     <div class="music-player">
         <i id="volume-icon" class="fas fa-volume-up"></i>
         <input type="range" id="volume-slider" min="0" max="100" value="100">
     </div>
 
-    <script src="/NikMax.js"></script>
+    <script src="NikMax.js"></script>
 </body>
 
 </html>
